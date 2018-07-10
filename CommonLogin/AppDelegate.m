@@ -16,9 +16,108 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+    
+    [WXApi registerApp:WXAppID];//注册微信
+    //微博登录
+    [WeiboSDK enableDebugMode:YES];
+    [WeiboSDK registerApp:WBAppKey];
+    
+    
     return YES;
 }
+
+-(BOOL)application:(UIApplication *)application handleOpenURL:(NSURL *)url{
+    NSString *str = [NSString stringWithFormat:@"%@",url];
+    
+    if ([str hasPrefix:WXAppID]) {//微信
+        return [WXApi handleOpenURL:url delegate:self];
+        
+    }else if ([str hasPrefix:@"wb1713016460"]) {//微博
+        return [WeiboSDK handleOpenURL:url delegate:self];
+        
+    }else if ([str hasPrefix:@"tencent"]){//qq
+        return [TencentOAuth HandleOpenURL:url];
+    }
+    return NO;
+}
+
+-(BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotatio
+{
+    NSString *str = [NSString stringWithFormat:@"%@",url];
+    
+    if ([str hasPrefix:WXAppID]) {
+        return [WXApi handleOpenURL:url delegate:self];
+        
+    }else if ([str hasPrefix:@"wb1713016460"]) {
+        return [WeiboSDK handleOpenURL:url delegate:self];
+        
+    }else if ([str hasPrefix:@"tencent"]){
+        return [TencentOAuth HandleOpenURL:url];
+    }
+    
+    return NO;
+}
+
+- (void)onResp:(BaseResp *)resp {
+    // 向微信请求授权后,得到响应结果
+    if([resp isKindOfClass:[SendAuthResp class]]){
+        SendAuthResp *response = (SendAuthResp *)resp;
+        if(response.errCode == 0){//授权成功
+            
+            [[NSNotificationCenter defaultCenter] postNotificationName:@"WXGetCode" object:@{@"code":response.code}];
+            
+        }else if (response.errCode == -2){//用户取消
+            UIAlertView* alert = [[UIAlertView alloc] initWithTitle:@"提醒" message:@"授权失败，用户取消" delegate:self cancelButtonTitle:@"确定" otherButtonTitles:nil, nil];
+            [alert show];
+        }else if (response.errCode == -4){//用户拒绝授权
+            UIAlertView* alert = [[UIAlertView alloc] initWithTitle:@"提醒" message:@"授权失败，用户拒绝授权" delegate:self cancelButtonTitle:@"确定" otherButtonTitles:nil, nil];
+            [alert show];
+        }
+        
+    }
+}
+
+//微博回调
+- (void)didReceiveWeiboResponse:(WBBaseResponse *)response
+{
+    if ([response isKindOfClass:WBAuthorizeResponse.class]) {
+        NSString *userId = [(WBAuthorizeResponse*)response userID];
+        NSString *accessToken = [(WBAuthorizeResponse*)response accessToken];
+        
+        if (userId == nil || [userId isEqual:[NSNull null]]) {
+            return;
+        }
+        
+        NSDictionary *dicInfo = @{@"userId":userId,@"accessToken":accessToken};
+        [[NSNotificationCenter defaultCenter] postNotificationName:@"WBGetResponse" object:dicInfo];
+    }
+    
+    if ([response isKindOfClass:WBSendMessageToWeiboResponse.class])
+    {
+        if(response.statusCode == WeiboSDKResponseStatusCodeSuccess){
+            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:nil
+                                                            message:@"分享成功"
+                                                           delegate:nil
+                                                  cancelButtonTitle:NSLocalizedString(@"确定", nil)
+                                                  otherButtonTitles:nil];
+            [alert show];
+        }else{
+            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:nil
+                                                            message:@"分享失败"
+                                                           delegate:nil
+                                                  cancelButtonTitle:NSLocalizedString(@"确定", nil)
+                                                  otherButtonTitles:nil];
+            [alert show];
+        }
+    }
+    
+}
+
+- (void)didReceiveWeiboRequest:(WBBaseRequest *)request {
+    
+}
+
+
 
 
 - (void)applicationWillResignActive:(UIApplication *)application {

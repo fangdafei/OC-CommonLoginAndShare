@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		09C68B648EEB2C8417C4936C /* libPods-CommonLogin.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 76D7731F2BE16EC39EC7CCCD /* libPods-CommonLogin.a */; };
 		D1C2BCA420F45F1D002D6D75 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D1C2BCA320F45F1D002D6D75 /* AppDelegate.m */; };
 		D1C2BCA720F45F1D002D6D75 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D1C2BCA620F45F1D002D6D75 /* ViewController.m */; };
 		D1C2BCAA20F45F1D002D6D75 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D1C2BCA820F45F1D002D6D75 /* Main.storyboard */; };
@@ -15,6 +16,10 @@
 		D1C2BCB220F45F1F002D6D75 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D1C2BCB120F45F1F002D6D75 /* main.m */; };
 		D1C2BCBC20F45F1F002D6D75 /* CommonLoginTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D1C2BCBB20F45F1F002D6D75 /* CommonLoginTests.m */; };
 		D1C2BCC720F45F1F002D6D75 /* CommonLoginUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = D1C2BCC620F45F1F002D6D75 /* CommonLoginUITests.m */; };
+		D1C2BCD620F487CA002D6D75 /* TencentOpenAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D1C2BCD520F487CA002D6D75 /* TencentOpenAPI.framework */; };
+		D1C2BCDD20F487D4002D6D75 /* README.txt in Resources */ = {isa = PBXBuildFile; fileRef = D1C2BCDA20F487D3002D6D75 /* README.txt */; };
+		D1C2BCDE20F487D4002D6D75 /* libWeChatSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D1C2BCDC20F487D3002D6D75 /* libWeChatSDK.a */; };
+		D1C2BCEC20F49024002D6D75 /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = D1C2BCEB20F49024002D6D75 /* libc++.tbd */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +40,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4E8BE0838AFBAE49ED8600FE /* Pods-CommonLogin.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CommonLogin.release.xcconfig"; path = "Pods/Target Support Files/Pods-CommonLogin/Pods-CommonLogin.release.xcconfig"; sourceTree = "<group>"; };
+		76D7731F2BE16EC39EC7CCCD /* libPods-CommonLogin.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-CommonLogin.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D1C2BC9F20F45F1D002D6D75 /* CommonLogin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CommonLogin.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D1C2BCA220F45F1D002D6D75 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		D1C2BCA320F45F1D002D6D75 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -51,6 +58,15 @@
 		D1C2BCC220F45F1F002D6D75 /* CommonLoginUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CommonLoginUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D1C2BCC620F45F1F002D6D75 /* CommonLoginUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CommonLoginUITests.m; sourceTree = "<group>"; };
 		D1C2BCC820F45F1F002D6D75 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D1C2BCD520F487CA002D6D75 /* TencentOpenAPI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = TencentOpenAPI.framework; sourceTree = "<group>"; };
+		D1C2BCD820F487D3002D6D75 /* WXApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXApi.h; sourceTree = "<group>"; };
+		D1C2BCD920F487D3002D6D75 /* WXApiObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXApiObject.h; sourceTree = "<group>"; };
+		D1C2BCDA20F487D3002D6D75 /* README.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.txt; sourceTree = "<group>"; };
+		D1C2BCDB20F487D3002D6D75 /* WechatAuthSDK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WechatAuthSDK.h; sourceTree = "<group>"; };
+		D1C2BCDC20F487D3002D6D75 /* libWeChatSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libWeChatSDK.a; sourceTree = "<group>"; };
+		D1C2BCE720F4894E002D6D75 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		D1C2BCEB20F49024002D6D75 /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
+		E58023F5DD34E3A0549BAAB5 /* Pods-CommonLogin.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CommonLogin.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CommonLogin/Pods-CommonLogin.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +74,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D1C2BCEC20F49024002D6D75 /* libc++.tbd in Frameworks */,
+				09C68B648EEB2C8417C4936C /* libPods-CommonLogin.a in Frameworks */,
+				D1C2BCD620F487CA002D6D75 /* TencentOpenAPI.framework in Frameworks */,
+				D1C2BCDE20F487D4002D6D75 /* libWeChatSDK.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,13 +98,35 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A0233DCC47872A0B8EDD6DFA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D1C2BCEB20F49024002D6D75 /* libc++.tbd */,
+				76D7731F2BE16EC39EC7CCCD /* libPods-CommonLogin.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		AEA87D9B357D6920855C2509 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E58023F5DD34E3A0549BAAB5 /* Pods-CommonLogin.debug.xcconfig */,
+				4E8BE0838AFBAE49ED8600FE /* Pods-CommonLogin.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		D1C2BC9620F45F1D002D6D75 = {
 			isa = PBXGroup;
 			children = (
+				D1C2BCD720F487D3002D6D75 /* wenxin */,
+				D1C2BCD420F487CA002D6D75 /* tencent */,
 				D1C2BCA120F45F1D002D6D75 /* CommonLogin */,
 				D1C2BCBA20F45F1F002D6D75 /* CommonLoginTests */,
 				D1C2BCC520F45F1F002D6D75 /* CommonLoginUITests */,
 				D1C2BCA020F45F1D002D6D75 /* Products */,
+				AEA87D9B357D6920855C2509 /* Pods */,
+				A0233DCC47872A0B8EDD6DFA /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -105,6 +147,7 @@
 				D1C2BCA320F45F1D002D6D75 /* AppDelegate.m */,
 				D1C2BCA520F45F1D002D6D75 /* ViewController.h */,
 				D1C2BCA620F45F1D002D6D75 /* ViewController.m */,
+				D1C2BCE720F4894E002D6D75 /* PrefixHeader.pch */,
 				D1C2BCA820F45F1D002D6D75 /* Main.storyboard */,
 				D1C2BCAB20F45F1F002D6D75 /* Assets.xcassets */,
 				D1C2BCAD20F45F1F002D6D75 /* LaunchScreen.storyboard */,
@@ -132,6 +175,26 @@
 			path = CommonLoginUITests;
 			sourceTree = "<group>";
 		};
+		D1C2BCD420F487CA002D6D75 /* tencent */ = {
+			isa = PBXGroup;
+			children = (
+				D1C2BCD520F487CA002D6D75 /* TencentOpenAPI.framework */,
+			);
+			path = tencent;
+			sourceTree = "<group>";
+		};
+		D1C2BCD720F487D3002D6D75 /* wenxin */ = {
+			isa = PBXGroup;
+			children = (
+				D1C2BCD820F487D3002D6D75 /* WXApi.h */,
+				D1C2BCD920F487D3002D6D75 /* WXApiObject.h */,
+				D1C2BCDA20F487D3002D6D75 /* README.txt */,
+				D1C2BCDB20F487D3002D6D75 /* WechatAuthSDK.h */,
+				D1C2BCDC20F487D3002D6D75 /* libWeChatSDK.a */,
+			);
+			path = wenxin;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -139,9 +202,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D1C2BCCB20F45F1F002D6D75 /* Build configuration list for PBXNativeTarget "CommonLogin" */;
 			buildPhases = (
+				6C00180E5DB3C6CFCEA5DCF7 /* [CP] Check Pods Manifest.lock */,
 				D1C2BC9B20F45F1D002D6D75 /* Sources */,
 				D1C2BC9C20F45F1D002D6D75 /* Frameworks */,
 				D1C2BC9D20F45F1D002D6D75 /* Resources */,
+				648FA1122B43C1392D37114D /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -237,6 +302,7 @@
 			files = (
 				D1C2BCAF20F45F1F002D6D75 /* LaunchScreen.storyboard in Resources */,
 				D1C2BCAC20F45F1F002D6D75 /* Assets.xcassets in Resources */,
+				D1C2BCDD20F487D4002D6D75 /* README.txt in Resources */,
 				D1C2BCAA20F45F1D002D6D75 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -256,6 +322,45 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		648FA1122B43C1392D37114D /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-CommonLogin/Pods-CommonLogin-resources.sh",
+				"${PODS_ROOT}/Weibo_SDK/libWeiboSDK/WeiboSDK.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/WeiboSDK.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CommonLogin/Pods-CommonLogin-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6C00180E5DB3C6CFCEA5DCF7 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CommonLogin-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		D1C2BC9B20F45F1D002D6D75 /* Sources */ = {
@@ -431,14 +536,24 @@
 		};
 		D1C2BCCC20F45F1F002D6D75 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E58023F5DD34E3A0549BAAB5 /* Pods-CommonLogin.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2JT283FMP5;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/tencent",
+				);
+				GCC_PREFIX_HEADER = "$(SRCROOT)/CommonLogin/PrefixHeader.pch";
 				INFOPLIST_FILE = CommonLogin/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/wenxin",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = ff.CommonLogin;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -448,14 +563,24 @@
 		};
 		D1C2BCCD20F45F1F002D6D75 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4E8BE0838AFBAE49ED8600FE /* Pods-CommonLogin.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2JT283FMP5;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/tencent",
+				);
+				GCC_PREFIX_HEADER = "$(SRCROOT)/CommonLogin/PrefixHeader.pch";
 				INFOPLIST_FILE = CommonLogin/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/wenxin",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = ff.CommonLogin;
 				PRODUCT_NAME = "$(TARGET_NAME)";

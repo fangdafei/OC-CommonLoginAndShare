@@ -1,0 +1,16 @@
+PODS:
+  - Weibo_SDK (3.2.3)
+
+DEPENDENCIES:
+  - Weibo_SDK (~> 3.2.3)
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - Weibo_SDK
+
+SPEC CHECKSUMS:
+  Weibo_SDK: 652ca78c2f7147a5de5e75e7cbea89838a81772a
+
+PODFILE CHECKSUM: 00f9763366e5373cae909a692d5d9278276643a9
+
+COCOAPODS: 1.5.3

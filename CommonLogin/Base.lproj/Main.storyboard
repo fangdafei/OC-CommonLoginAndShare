@@ -1,20 +1,87 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" systemVersion="17A277" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
-        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="sKr-Xr-LFx"/>
+                        <viewControllerLayoutGuide type="bottom" id="4dB-9y-nIk"/>
+                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rVk-Wf-MO7">
+                                <rect key="frame" x="160" y="100" width="54" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="x0N-kP-qvJ"/>
+                                </constraints>
+                                <state key="normal" title="QQ登录"/>
+                                <connections>
+                                    <action selector="QQLogin:" destination="BYZ-38-t0r" eventType="touchUpInside" id="SrO-W6-eg6"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b4w-K7-E7c">
+                                <rect key="frame" x="156" y="340" width="62" height="30"/>
+                                <state key="normal" title="微博登录"/>
+                                <connections>
+                                    <action selector="weiboLogin:" destination="BYZ-38-t0r" eventType="touchUpInside" id="LaO-l4-4de"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TXQ-VX-WfH">
+                                <rect key="frame" x="156" y="230" width="62" height="30"/>
+                                <state key="normal" title="微信登录"/>
+                                <connections>
+                                    <action selector="weixinLogin:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ljg-9d-HmE"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oAT-Dv-685">
+                                <rect key="frame" x="160" y="140" width="54" height="30"/>
+                                <state key="normal" title="QQ分享"/>
+                                <connections>
+                                    <action selector="shareQQ:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ns5-zu-Gv0"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uIT-gt-9zO">
+                                <rect key="frame" x="156" y="270" width="62" height="30"/>
+                                <state key="normal" title="微信分享"/>
+                                <connections>
+                                    <action selector="shareWeixin:" destination="BYZ-38-t0r" eventType="touchUpInside" id="w9d-Xi-uBq"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GT2-R5-7Jo">
+                                <rect key="frame" x="156" y="380" width="62" height="30"/>
+                                <state key="normal" title="微博分享"/>
+                                <connections>
+                                    <action selector="shareWeibo:" destination="BYZ-38-t0r" eventType="touchUpInside" id="PMb-vt-kPp"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <constraints>
+                            <constraint firstItem="GT2-R5-7Jo" firstAttribute="top" secondItem="b4w-K7-E7c" secondAttribute="bottom" constant="10" id="02A-MD-1C8"/>
+                            <constraint firstItem="uIT-gt-9zO" firstAttribute="top" secondItem="TXQ-VX-WfH" secondAttribute="bottom" constant="10" id="0Na-e3-2yB"/>
+                            <constraint firstItem="rVk-Wf-MO7" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="2Hp-8V-Bx8"/>
+                            <constraint firstItem="b4w-K7-E7c" firstAttribute="top" secondItem="TXQ-VX-WfH" secondAttribute="bottom" constant="80" id="2vR-0t-wrU"/>
+                            <constraint firstItem="uIT-gt-9zO" firstAttribute="centerX" secondItem="TXQ-VX-WfH" secondAttribute="centerX" id="8Br-Id-3l2"/>
+                            <constraint firstItem="TXQ-VX-WfH" firstAttribute="top" secondItem="rVk-Wf-MO7" secondAttribute="bottom" constant="100" id="A7a-O8-Jue"/>
+                            <constraint firstItem="b4w-K7-E7c" firstAttribute="centerX" secondItem="TXQ-VX-WfH" secondAttribute="centerX" id="Hmr-OT-e7U"/>
+                            <constraint firstItem="TXQ-VX-WfH" firstAttribute="centerX" secondItem="rVk-Wf-MO7" secondAttribute="centerX" id="Irr-Xd-3mc"/>
+                            <constraint firstItem="rVk-Wf-MO7" firstAttribute="top" secondItem="sKr-Xr-LFx" secondAttribute="bottom" constant="80" id="QzX-MX-3Nt"/>
+                            <constraint firstItem="GT2-R5-7Jo" firstAttribute="centerX" secondItem="b4w-K7-E7c" secondAttribute="centerX" id="YDf-sz-NBi"/>
+                            <constraint firstItem="oAT-Dv-685" firstAttribute="centerX" secondItem="rVk-Wf-MO7" secondAttribute="centerX" id="fwG-YI-0CA"/>
+                            <constraint firstItem="oAT-Dv-685" firstAttribute="top" secondItem="rVk-Wf-MO7" secondAttribute="bottom" constant="10" id="xzB-gS-8RO"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
